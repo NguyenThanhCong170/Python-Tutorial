@@ -1,0 +1,15 @@
+import random 
+i = 0
+while i < 3:
+    w = int(input('you have 3 guesses, guess now: '))
+    i += 1 
+    arr=list(range(1,100))
+    ans = random.choice(arr)
+    if w == ans:
+        print('you win!')
+        break
+    else:
+        if i < 3:
+            print('try again, ', 3 - i, ' left')
+else:
+        print(f'better luck next time, {ans} is the correct answer')
